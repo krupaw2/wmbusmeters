@@ -1,15 +1,16 @@
 {
-    "name": "Wmbusmeters (W-MBus to MQTT)",
-    "version": "0.2.23",
-    "slug": "wmbusmeters",
-    "description": "Acquire utility meter readings using the wireless mbus protocol (WMBUS)",
+    "name": "Wmbusmeters krupaw",
+    "version": "0.1",
+    "slug": "wmbus",
+    "description": "wmbus zasilany po ETH",
     "arch": ["armv7", "aarch64", "amd64"],
-    "url": "https://github.com/weetmuts/wmbusmeters",
+    "url": "https://github.com/krupaw2/wmbusmeters",
     "init" : false,
     "startup": "application",
     "boot": "auto",
     "devices": ["/dev/ttyUSB0", "/dev/ttyAMA0"],
     "usb": true,
+    "host_network": true,
     "uart": true,
     "services": [
       "mqtt:need"
