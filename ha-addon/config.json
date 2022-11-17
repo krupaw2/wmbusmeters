@@ -10,7 +10,12 @@
     "boot": "auto",
     "devices": ["/dev/ttyUSB0", "/dev/ttyAMA0"],
     "usb": true,
-    "host_network": true,
+    "ports": {
+      "8118/tcp": 8118
+    },
+    "ports_description": {
+      "8118/tcp": "wMbus-GW tcp-listen port"
+    },
     "uart": true,
     "services": [
       "mqtt:need"
