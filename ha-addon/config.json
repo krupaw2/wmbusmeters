@@ -1,6 +1,6 @@
 {
     "name": "Wmbusmeters krupaw",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "slug": "wmbus",
     "description": "wmbus zasilany po ETH",
     "arch": ["armv7", "aarch64", "amd64"],
