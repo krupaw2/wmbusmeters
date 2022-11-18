@@ -1,4 +1,4 @@
-#!/usr/bin/env bashio
+#!/usr/bin/with-contenv bashio
 
 CONFIG_PATH=/data/options.json
 
@@ -46,7 +46,8 @@ pub_args_quoted=('-h' \'$MQTT_HOST\' )
 [[ ! -z ${MQTT_PASSWORD+x} ]] && pub_args+=( '-P' $MQTT_PASSWORD ) && pub_args_quoted+=( '-P' \'$MQTT_PASSWORD\' )
 
 cat > /wmbusmeters/mosquitto_pub.sh << EOL
-#!/usr/bin/env bashio
+
+#!/usr/bin/with-contenv bashio
 TOPIC=\$1
 MESSAGE=\$2
 /usr/bin/mosquitto_pub ${pub_args_quoted[@]} -r -t \$TOPIC -m "\$MESSAGE"
